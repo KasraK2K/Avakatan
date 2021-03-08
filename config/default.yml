@@ -1,0 +1,34 @@
+server:
+  port: 3500
+  logger: ['error', 'warn', 'debug', 'log', 'verbose']
+  protocol: 'http'
+  address: 'http://localhost:3500'
+  secureStaticPath: '/uploads'
+  documentation: '/documentation'
+
+db:
+  type: 'postgres'
+  port: 5432
+  database: 'avakatan'
+  cache:
+    time: 54000000
+
+jwt:
+  expiresIn: 31104000
+
+pagination:
+  page: 1
+  limit: 10
+
+RMQ:
+  urls:
+    [
+      'amqps://xoquktxw:s5bI1babPTq84cWmCsXGKBYNMsZViPGV@fox.rmq.cloudamqp.com/xoquktxw',
+    ]
+  queue: 'lead_queue'
+  message:
+    leadInterestedCreated: 'lead_interested_created'
+
+events:
+  leadManager:
+    free: 'leadManagerFree'

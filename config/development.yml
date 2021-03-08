@@ -1,0 +1,14 @@
+server:
+  logger: ['error', 'warn', 'debug', 'log', 'verbose']
+  address: 'http://localhost:3500'
+
+db:
+  host: 'localhost'
+  username: 'postgres'
+  password: 'postgres'
+  synchronize: true
+  cache:
+    time: 0
+
+jwt:
+  secret: 'topSecret51'

@@ -1,0 +1,8 @@
+server:
+  origin: http://jinvest-example.com
+  logger: ['error', 'warn']
+  address: 'http://jinvest.com'
+  secureStaticPath: '/uploads' # add long string before this path to be more secure like g@io$8509a^&fkj0a98w/uploads
+
+db:
+  synchronize: false
