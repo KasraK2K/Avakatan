@@ -1,0 +1,413 @@
+{
+	"info": {
+		"_postman_id": "3dcf7dc2-c38a-4728-944b-39fdd152cbb9",
+		"name": "AvaKatan",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Lead",
+			"item": [
+				{
+					"name": "Create Lead",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"kasra\",\r\n    \"family_name\": \"karami\",\r\n    \"email\": \"kasra.karami.kk@gmail.com\",\r\n    \"cellphone\": \"09183619290\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/leads",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"leads"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Leads",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/leads?page=1&limit=10",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"leads"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "1"
+								},
+								{
+									"key": "limit",
+									"value": "10"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Lead by ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/leads/{{leadId}}",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"leads",
+								"{{leadId}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Oldest Lead to assign",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/leads/old/lead/to_ssign",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"leads",
+								"old",
+								"lead",
+								"to_ssign"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Lead",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"kasra\",\r\n    \"family_name\": \"karami\",\r\n    \"email\": \"kasra.karami.kk@gmail.com\",\r\n    \"cellphone\": \"09183619290\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/leads/{{leadId}}",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"leads",
+								"{{leadId}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Soft Delete Lead By ID",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/leads/{{leadId}}",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"leads",
+								"{{leadId}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Lead By ID",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/leads/remove/{{leadId}}",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"leads",
+								"remove",
+								"{{leadId}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Lead Bulk Insert",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "file",
+									"type": "file",
+									"src": "/C:/Users/SerenDPT/Desktop/bulk.csv"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{host}}/leads/bulk/insert",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"leads",
+								"bulk",
+								"insert"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Lead Manager",
+			"item": [
+				{
+					"name": "Creat Lead Manager",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"kasra\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/lead-managers",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"lead-managers"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Lead Managers",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/lead-managers?page=1&limit=10",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"lead-managers"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "1"
+								},
+								{
+									"key": "limit",
+									"value": "10"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Lead Manager by ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/lead-managers/{{leadManagerId}}",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"lead-managers",
+								"{{leadManagerId}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Lead Manager",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"hasan\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/lead-managers/{{leadManagerId}}",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"lead-managers",
+								"{{leadManagerId}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Assign Lead to Lead Manager",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"leadId\": \"{{leadId}}\",\r\n    \"leadManagerId\": \"{{leadManagerId}}\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/lead-managers/assign",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"lead-managers",
+								"assign"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Soft Delete Lead Manager",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/lead-managers/{{leadManagerId}}",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"lead-managers",
+								"{{leadManagerId}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Lead Manager",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/lead-managers/remove/{{leadManagerId}}",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"lead-managers",
+								"remove",
+								"{{leadManagerId}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Search Lead Manager by Name",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/lead-managers/search/Ka",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"lead-managers",
+								"search",
+								"Ka"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Lead Manager Interest",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"interest\": true\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/lead-managers/is/interest/{{leadManagerId}}",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"lead-managers",
+								"is",
+								"interest",
+								"{{leadManagerId}}"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
